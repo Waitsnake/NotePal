@@ -6,6 +6,7 @@ using Dalamud.Game.ClientState.Objects;
 using NotesPal.Commands;
 using NotesPal.Context;
 using NotesPal.Data;
+using NotesPal.Windows;
 
 namespace NotesPal;
 
@@ -21,10 +22,11 @@ public class Plugin : IDalamudPlugin
 
     public Plugin(IDalamudPluginInterface pluginInterface)
     {
-		Services.Instance = pluginInterface.Create<Services>()!;
+        Services.Instance = pluginInterface.Create<Services>()!;
         Services.Instance.PluginInterface = pluginInterface;
-        Services.Instance.WindowSystem = new WindowSystem("NotesPal");
+        Services.Instance.WindowSystem = new WindowSystem(Name);
         Services.Instance.PluginInterface.UiBuilder.Draw += Services.Instance.WindowSystem.Draw;
+        Services.Instance.PluginInterface.UiBuilder.OpenMainUi += MainWindow.Instance.Toggle;
         
         CommandCreator.Initialize();
         NoteContextAction.Initialize();
@@ -34,7 +36,8 @@ public class Plugin : IDalamudPlugin
 
     public void Dispose()
     {
-		Services.Instance.WindowSystem.RemoveAllWindows();
+        Services.Instance.PluginInterface.UiBuilder.OpenMainUi -= MainWindow.Instance.Toggle;
+        Services.Instance.WindowSystem.RemoveAllWindows();
     }
 }
 

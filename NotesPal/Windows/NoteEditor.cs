@@ -21,7 +21,7 @@ namespace NotesPal.Windows
 
         public static void OpenNoteForPlayer(string playerName, uint worldId)
         {
-            var note = NoteDb.Get(playerName, worldId);  // Diese Methode musst du anpassen, um eine Note für den Spieler zu holen
+            var note = NoteDb.Get(playerName, worldId);
             if (note != null)
             {
                 OpenNote(note);

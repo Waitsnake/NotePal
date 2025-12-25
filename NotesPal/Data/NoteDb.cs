@@ -1,6 +1,6 @@
-using System;  // For DateTime
+using System;
 using System.IO;
-using System.Collections.Generic;  // For List<T>
+using System.Collections.Generic;
 using System.Linq;
 using LiteDB;
 

@@ -1,8 +1,8 @@
-using System;  // For DateTime
-using System.Collections.Generic;  // For List<T>
-using System.Security.Cryptography;  // For MD5
-using System.Text;  // For Encoding
-using System.Linq;  // For LINQ methods like Select
+using System;
+using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
+using System.Linq;
 
 namespace NotesPal.Data
 {

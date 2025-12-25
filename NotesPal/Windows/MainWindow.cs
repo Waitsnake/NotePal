@@ -109,7 +109,7 @@ namespace NotesPal.Windows
                 ImGui.BeginDisabled();
     
             ImGui.PushStyleColor(ImGuiCol.Button, new Vector4(1.0f, 0.2f, 0.2f, 1.0f)); // rot
-            if (ImGui.Button("Delete All Memos"))
+            if (ImGui.Button("Delete All Notes"))
             {
                 showDeleteAllConfirmation = true; // bool-Flag um Bestätigungsdialog anzuzeigen
             }

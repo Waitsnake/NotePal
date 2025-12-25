@@ -3,9 +3,12 @@
   "Name": "NotesPal",
   "InternalName": "NotesPal",
   "Punchline": "A tiny, boring, reliable notes plugin.",
-  "Description": "Make personal text notes for players you meet in game.",
+  "Description": "Make personal text notes for players you meet in game.\nRight-click on a player's name in the game and select 'New Note' to create a note or 'Open Note' to read a exsiting note.",
   "ApplicableVersion": "any",
   "Changelog": "Initial version",
+  "RepoUrl": "https://github.com/Waitsnake/NotesPal",
+  "IconUrl": "https://raw.githubusercontent.com/Waitsnake/NotesPal/main/NotesPalIcon.png",
+  "ImageUrls": [],
   "Tags": [
     "plugin",
     "notes",

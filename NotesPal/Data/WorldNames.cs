@@ -91,7 +91,7 @@ namespace NotesPal.Data
 			{ 409, "Kraken" },
 			{ 410, "Rafflesia" },
 			{ 411, "Golem" }
-            // Weitere Welten hier hinzufügen
+            // Add more worlds here
         };
 
         public static string GetWorldName(uint worldId) => Names.ContainsKey(worldId) ? Names[worldId] : "Unknown";
